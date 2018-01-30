@@ -200,12 +200,9 @@ else
     exitCode=0
 fi
 
-# Check if we have ANY critical disk(s)
-haveCriticalDisk=$(echo "${diskArray[@]}" | grep -o 'Critical')
-
 ### Print status to stdout
 # If we have the '-c' flag and any disk is critical...
-if [[ $onlyCritical == 1 && -n $haveCriticalDisk ]]; then
+if [[ $onlyCritical == 1 && $exitCode == 2 ]]; then
     # Loop diskArray and save the "Critical" disks in string
     for disk in "${diskArray[@]}"; do
         if [[ $disk =~ ^Critical ]]; then
