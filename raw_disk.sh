@@ -219,6 +219,3 @@ else
 fi
 
 exit $exitCode
-
-
-exit $exitCode
