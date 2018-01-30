@@ -202,7 +202,7 @@ fi
 
 ### Print status to stdout
 # If we have the '-c' flag
-if [[ $onlyCritical == 1 ]]; then
+if [[ $onlyCritical == 1  && $(echo "${diskArray[@]}" | grep -q 'Critical') ]]; then
     # Loop diskArray and save the "Critical" disks in string
     for disk in "${diskArray[@]}"; do
         if [[ $disk =~ ^Critical ]]; then
