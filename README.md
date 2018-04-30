@@ -1,6 +1,9 @@
 # raw_disk
 OP5 dynamic disk check for unpartitioned disks
 
+This project has been discontinued. Please see [linux_disk](https://github.com/maulinglawns/linux_disk) instead.
+This project will be saved mostly for historical reasons. No further developments will be made.
+
 <pre>
 NAME
     raw_disk
